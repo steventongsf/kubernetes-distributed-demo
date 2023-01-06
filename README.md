@@ -6,7 +6,11 @@ Demo of a multi-container application consisting of:
 * Users server
 * Browser UI
 
-# Runtime Instructions
+# Local Runtime Instructions
+```
+docker compose -d up
+```
+# Kubernetes Runtime Instructions
 The following assumes 
 * you have a configured Kubernetes cluster *
 * authenticated administration client to run __kubectl__
@@ -22,15 +26,18 @@ make build
 ```
 make deploy
 ```
-# Check Kubernetes runtime
+## Check Kubernetes runtime
 ```
 make status
 ```
-# Remove deployments and services
+## Remove deployments and services
 ```
 make delete
 ```
 
+# To Dos
+* create and use PersistentVolume
+* Move hard-coded values to environment variables
 
 
 
